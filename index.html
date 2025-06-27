@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirius Uzay | Hoşgeldiniz</title>
     <style>
+        /* Giriş animasyonu için overlay */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0e2e 0%, #1a237e 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1.5s ease-out;
+        }
+
+        .loading-text {
+            font-size: 2rem;
+            color: #e3f2fd;
+            margin-top: 20px;
+            text-shadow: 0 0 10px rgba(227, 242, 253, 0.7);
+            letter-spacing: 2px;
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(79, 195, 247, 0.3);
+            border-radius: 50%;
+            border-top-color: #4fc3f7;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
         body {
             display: flex;
             justify-content: center;
@@ -15,6 +53,13 @@
             font-family: 'Arial', sans-serif;
             overflow: hidden;
             color: white;
+            opacity: 0;
+            animation: fadeIn 0.1s ease-in forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
         }
 
         .stars {
@@ -257,6 +302,12 @@
     </style>
 </head>
 <body>
+    <!-- Giriş animasyonu overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Sistem Ayarlanıyor...</div>
+    </div>
+
     <div class="stars" id="stars"></div>
     <div class="glow-effect"></div>
 
@@ -329,11 +380,11 @@
         // Gizli buton ve resim yağmuru
         const secretButton = document.getElementById('secretButton');
         const images = [
-            'https://static.vecteezy.com/system/resources/previews/038/050/414/large_2x/pide-turkish-food-illustration-free-png.png', // GitHub
-            'https://yeniaycafe.com/wp-content/uploads/2023/11/yeniay-cafe-manti.png', // Instagram
-            'https://files.kick.com/images/user/28258544/profile_image/conversion/418e5a9a-1531-4591-b88e-ff25054f8214-fullsize.webp', // Twitter
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Crystal_Clear_action_bookmark_blue.svg/640px-Crystal_Clear_action_bookmark_blue.svg.png', // Twitch
-            'https://i.pinimg.com/originals/c8/15/38/c81538f10d8cc804c97b0xbcaddd49efc.png' // YouTube
+            'https://static.vecteezy.com/system/resources/previews/038/050/414/large_2x/pide-turkish-food-illustration-free-png.png',
+            'https://yeniaycafe.com/wp-content/uploads/2023/11/yeniay-cafe-manti.png',
+            'https://files.kick.com/images/user/28258544/profile_image/conversion/418e5a9a-1531-4591-b88e-ff25054f8214-fullsize.webp',
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Crystal_Clear_action_bookmark_blue.svg/640px-Crystal_Clear_action_bookmark_blue.svg.png',
+            'https://i.pinimg.com/originals/c8/15/38/c81538f10d8cc804c97b0xbcaddd49efc.png'
         ];
 
         secretButton.addEventListener('click', function() {
@@ -368,6 +419,19 @@
                     }, duration * 1000);
                 }, i * 100);
             }
+        });
+
+        // Giriş animasyonu
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+
+            // Giriş animasyonunu kapat
+            setTimeout(() => {
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.remove();
+                }, 1500);
+            }, 3000);
         });
     </script>
 </body>
