@@ -16,7 +16,7 @@
             overflow: hidden;
             color: white;
         }
-        
+
         .stars {
             position: absolute;
             top: 0;
@@ -25,32 +25,32 @@
             height: 100%;
             z-index: 0;
         }
-        
+
         .star {
             position: absolute;
             background-color: white;
             border-radius: 50%;
             animation: twinkle 2s infinite alternate;
         }
-        
+
         @keyframes twinkle {
             0% { opacity: 0.2; }
             100% { opacity: 1; }
         }
-        
+
         .welcome-container {
             text-align: center;
             z-index: 1;
             position: relative;
         }
-        
+
         .welcome-text {
             font-size: 4.5rem;
             font-weight: bold;
             color: #ffffff;
             position: relative;
             display: inline-block;
-            text-shadow: 
+            text-shadow:
                 0 0 10px #42a5f5,
                 0 0 20px #42a5f5,
                 0 0 30px #42a5f5;
@@ -59,54 +59,54 @@
             -webkit-font-smoothing: antialiased;
             cursor: default;
         }
-        
+
         .welcome-text span {
             display: inline-block;
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
-        
+
         /* Her harfe özel hover animasyonu */
-        .welcome-text:hover span:nth-child(1) { 
+        .welcome-text:hover span:nth-child(1) {
             transform: translateY(-10px) rotate(-5deg);
             color: #FF9E80;
         }
-        .welcome-text:hover span:nth-child(2) { 
+        .welcome-text:hover span:nth-child(2) {
             transform: translateY(-15px) rotate(3deg);
             color: #FFD180;
         }
-        .welcome-text:hover span:nth-child(4) { 
+        .welcome-text:hover span:nth-child(4) {
             transform: translateY(-12px) scale(1.2);
             color: #8C9EFF;
         }
-        .welcome-text:hover span:nth-child(5) { 
+        .welcome-text:hover span:nth-child(5) {
             transform: translateY(-8px) rotate(5deg);
             color: #80D8FF;
         }
-        .welcome-text:hover span:nth-child(6) { 
+        .welcome-text:hover span:nth-child(6) {
             transform: translateY(-18px) rotate(-2deg);
             color: #A7FFEB;
         }
-        .welcome-text:hover span:nth-child(7) { 
+        .welcome-text:hover span:nth-child(7) {
             transform: translateY(-5px) scale(1.1);
             color: #CCFF90;
         }
-        .welcome-text:hover span:nth-child(8) { 
+        .welcome-text:hover span:nth-child(8) {
             transform: translateY(-14px) rotate(4deg);
             color: #FFFF8D;
         }
-        .welcome-text:hover span:nth-child(9) { 
+        .welcome-text:hover span:nth-child(9) {
             transform: translateY(-9px) rotate(-3deg);
             color: #FF8A80;
         }
-        .welcome-text:hover span:nth-child(10) { 
+        .welcome-text:hover span:nth-child(10) {
             transform: translateY(-7px) scale(1.15);
             color: #EA80FC;
         }
-        .welcome-text:hover span:nth-child(11) { 
+        .welcome-text:hover span:nth-child(11) {
             transform: translateY(-16px) rotate(2deg);
             color: #B388FF;
         }
-        
+
         /* Ş harfi için özel hover efekti (renk değişmez, sadece ışıltı) */
         .welcome-text span:nth-child(3) {
             position: relative;
@@ -116,20 +116,20 @@
             animation: siriusGlow 1.5s infinite alternate;
         }
         @keyframes siriusGlow {
-            0% { 
-                text-shadow: 
+            0% {
+                text-shadow:
                     0 0 10px #ffffff,
                     0 0 20px #ffffff,
                     0 0 30px #4fc3f7;
             }
-            100% { 
-                text-shadow: 
+            100% {
+                text-shadow:
                     0 0 20px #ffffff,
                     0 0 40px #ffffff,
                     0 0 60px #4fc3f7;
             }
         }
-        
+
         .subtext {
             margin-top: 30px;
             font-size: 1.8rem;
@@ -139,19 +139,19 @@
             -webkit-font-smoothing: antialiased;
             transition: all 0.3s ease;
         }
-        
+
         .welcome-container:hover .subtext {
             transform: scale(1.05);
             text-shadow: 0 0 15px rgba(227, 242, 253, 0.9);
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .social-link {
             display: flex;
             align-items: center;
@@ -165,42 +165,42 @@
             background: rgba(187, 222, 251, 0.1);
             backdrop-filter: blur(5px);
         }
-        
+
         .social-link:hover {
             background: rgba(187, 222, 251, 0.2);
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .social-link svg {
             width: 24px;
             height: 24px;
             filter: drop-shadow(0 0 5px rgba(187, 222, 251, 0.5));
             transition: all 0.3s ease;
         }
-        
+
         .social-link:hover svg {
             transform: scale(1.2);
         }
-        
+
         .discord-icon {
             fill: #5865F2;
         }
-        
+
         .kick-icon {
             fill: #53FC18;
         }
-        
+
         .sirius-logo {
             margin-bottom: 40px;
             transition: all 0.5s ease;
         }
-        
+
         .welcome-container:hover .sirius-logo {
             transform: rotate(5deg) scale(1.05);
             filter: drop-shadow(0 0 20px rgba(79, 195, 247, 0.9));
         }
-        
+
         .sirius-logo svg {
             width: 120px;
             height: 120px;
@@ -208,7 +208,7 @@
             filter: drop-shadow(0 0 15px rgba(79, 195, 247, 0.8));
             transition: all 0.5s ease;
         }
-        
+
         .glow-effect {
             position: absolute;
             width: 100%;
@@ -219,24 +219,57 @@
             z-index: -1;
             animation: pulseGlow 6s infinite alternate;
         }
-        
+
         @keyframes pulseGlow {
             0% { opacity: 0.7; }
             100% { opacity: 1; }
+        }
+
+        /* Gizli buton ve resim yağmuru için stiller */
+        .secret-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .falling-image {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 10;
+            pointer-events: none;
+            animation: falling linear forwards;
+        }
+
+        @keyframes falling {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="stars" id="stars"></div>
     <div class="glow-effect"></div>
-    
+
+    <!-- Gizli buton -->
+    <div class="secret-button" id="secretButton"></div>
+
     <div class="welcome-container">
         <div class="sirius-logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M12,2.5L8,7l-6,1.5l2,5.5L2,19l6-2.5L12,20l4-3.5L20,19l-2-5l2-5.5L16,7L12,2.5z M12,10c1.1,0,2,0.9,2,2s-0.9,2-2,2s-2-0.9-2-2S10.9,10,12,10z"/>
             </svg>
         </div>
-        
+
         <div class="welcome-text">
             <span>H</span>
             <span>o</span>
@@ -251,7 +284,7 @@
             <span>z</span>
         </div>
         <div class="subtext">Umarım seninle iyi vakitler geçiririz!</div>
-        
+
         <div class="social-links">
             <a href="https://discord.gg/GmTVkX5KcH" target="_blank" class="social-link">
                 <svg class="discord-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -272,26 +305,70 @@
         // Yıldız efekti oluşturma
         const starsContainer = document.getElementById('stars');
         const starCount = 200;
-        
+
         for (let i = 0; i < starCount; i++) {
             const star = document.createElement('div');
             star.classList.add('star');
-            
+
             // Rastgele boyut (1-3px)
             const size = Math.random() * 2 + 1;
             star.style.width = `${size}px`;
             star.style.height = `${size}px`;
-            
+
             // Rastgele konum
             star.style.left = `${Math.random() * 100}%`;
             star.style.top = `${Math.random() * 100}%`;
-            
+
             // Rastgele animasyon süresi
             star.style.animationDelay = `${Math.random() * 2}s`;
             star.style.animationDuration = `${Math.random() * 2 + 1}s`;
-            
+
             starsContainer.appendChild(star);
         }
+
+        // Gizli buton ve resim yağmuru
+        const secretButton = document.getElementById('secretButton');
+        const images = [
+            'https://static.vecteezy.com/system/resources/previews/038/050/414/large_2x/pide-turkish-food-illustration-free-png.png', // GitHub
+            'https://yeniaycafe.com/wp-content/uploads/2023/11/yeniay-cafe-manti.png', // Instagram
+            'https://files.kick.com/images/user/28258544/profile_image/conversion/418e5a9a-1531-4591-b88e-ff25054f8214-fullsize.webp', // Twitter
+            'https://2.bp.blogspot.com/-Np_LtxEoTzM/WcN1Bv4XRtI/AAAAAAAAAWY/8PsTy8i98fAs79bSA9suUzBzGHV-v_kqACLcBGAs/s1600/01.png', // Twitch
+            'https://i.pinimg.com/originals/c8/15/38/c81538f10d8cc804c97b0xbcaddd49efc.png' // YouTube
+        ];
+
+        secretButton.addEventListener('click', function() {
+            // 50 resim oluştur
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const img = document.createElement('div');
+                    img.className = 'falling-image';
+
+                    // Rastgele resim seç
+                    const randomImg = images[Math.floor(Math.random() * images.length)];
+                    img.style.backgroundImage = `url(${randomImg})`;
+
+                    // Rastgele pozisyon
+                    img.style.left = `${Math.random() * 100}%`;
+                    img.style.top = `-50px`;
+
+                    // Rastgele boyut
+                    const size = Math.random() * 35 + 20;
+                    img.style.width = `${size}px`;
+                    img.style.height = `${size}px`;
+
+                    // Rastgele animasyon süresi
+                    const duration = Math.random() * 3 + 2;
+                    img.style.animationDuration = `${duration}s`;
+
+                    document.body.appendChild(img);
+
+                    // Animasyon bitince resmi sil
+                    setTimeout(() => {
+                        img.remove();
+                    }, duration * 1000);
+                }, i * 100);
+            }
+        });
     </script>
 </body>
 </html>
